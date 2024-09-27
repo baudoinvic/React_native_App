@@ -5,7 +5,8 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import About from "./components/About/About";
+import About from "./components/About/About/About";
+import Services from "./components/About/Services/Services";
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="About" component={About} />
+        <Stack.Screen name="Services" component={Services} />
       </Stack.Navigator>
     </NavigationContainer>
   );

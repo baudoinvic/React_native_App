@@ -1,8 +1,10 @@
 
 import React from "react";
 import { Button, StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-export default function About() {
+export default function About({navigation}) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>What I do</Text>
@@ -20,7 +22,7 @@ export default function About() {
       <View style={styles.check}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => alert("Button Pressed!")}
+          onPress={() => navigation.navigate("Services")}
         >
           <Text style={styles.buttonText}>Check My Services</Text>
         </TouchableOpacity>

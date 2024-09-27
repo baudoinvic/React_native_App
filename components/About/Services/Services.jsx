@@ -1,6 +1,6 @@
 
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView,TouchableOpacity } from "react-native";
 
 const Services = () => {
   const services = [
@@ -13,34 +13,49 @@ const Services = () => {
     },
     {
       id: 2,
-      image: "https://example.com/path/to/image2.jpg", 
-      description: "Description for Image 2",
+      image:
+        "https://media.istockphoto.com/id/1503858430/vector/website-software-development-concept-web-design-site-and-mobile-app-on-laptop-testing-on.jpg?s=612x612&w=0&k=20&c=k8ckKsgOrPPxohAA_ywg2VXZzdCPptEbOlleRV8Kb7c=",
+      description:
+        "i use to design web applications and implement them as well with the a good optimization and maintenance  ",
     },
     {
       id: 3,
-      image: "https://example.com/path/to/image3.jpg", // Replace with your image URLs
-      description: "Description for Image 3",
+      image:
+        "https://media.istockphoto.com/id/1396848094/photo/neon-web-3-0-glowing-web-3-abstract-neon-glowing-background-3d-render-illustration.jpg?s=612x612&w=0&k=20&c=9kXE0lUyIKM6-NqL-BPwmEkf3Wy4cl_PecS_9nCqjRQ=",
+      description:
+        "mentoring people how to get more skills about web3 and gain more experience about it which will help them to benefit from it",
     },
   ];
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.text}>This is What I provide</Text>
-      <Text style={styles.subtitle}>
-        This is what I provide to companies and to my clients as well, and they
-        are always happy with my services
-      </Text>
-      {services.map((service) => (
-        <View key={service.id} style={styles.serviceItem}>
-          <Image
-            style={styles.image}
-            source={{ uri: service.image }}
-            resizeMode="cover"
-          />
-          <Text style={styles.serviceDescription}>{service.description}</Text>
+    <View>
+      <ScrollView contentContainerStyle={styles.container}>
+        <Text style={styles.text}>This is What I provide</Text>
+        <Text style={styles.subtitle}>
+          This is what I provide to companies and to my clients as well, and
+          they are always happy with my services
+        </Text>
+        {services.map((service) => (
+          <View key={service.id} style={styles.serviceItem}>
+            <Image
+              style={styles.image}
+              source={{ uri: service.image }}
+              resizeMode="cover"
+            />
+            <Text style={styles.serviceDescription}>{service.description}</Text>
+          </View>
+        ))}
+
+        <View style={styles.check}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate("Services")}
+          >
+            <Text style={styles.buttonText}>Let's get in touch</Text>
+          </TouchableOpacity>
         </View>
-      ))}
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
@@ -64,18 +79,32 @@ const styles = StyleSheet.create({
   },
   serviceItem: {
     alignItems: "center",
-    marginBottom: 30, 
+    marginBottom: 30,
     marginTop: 30,
   },
+
   image: {
-    width: 300, 
-    height: 200, 
-    borderRadius: 10, 
+    width: 300,
+    height: 200,
+    borderRadius: 10,
   },
   serviceDescription: {
-    marginTop: 10, 
-    textAlign: "left", 
+    marginTop: 10,
+    textAlign: "left",
     fontSize: 16,
+  },
+
+  button: {
+    backgroundColor: "#0984e3",
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 10,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
 

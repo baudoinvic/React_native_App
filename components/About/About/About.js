@@ -34,9 +34,9 @@ export default function About({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start", // Aligns content to the top
-    paddingTop: 50, // Moves content further from the top of the screen
-    paddingHorizontal: 20, // Adds some horizontal padding
+    justifyContent: "flex-start",
+    paddingTop: 50, 
+    paddingHorizontal: 20, 
   },
   title: {
     fontSize: 30,
@@ -54,15 +54,15 @@ const styles = StyleSheet.create({
     alignItems: "left",
   },
   button: {
-    backgroundColor: "#0984e3", // Button color
-    paddingVertical: 15, // Vertical padding
-    paddingHorizontal: 30, // Horizontal padding
-    borderRadius: 10, // Rounded corners
+    backgroundColor: "#0984e3", 
+    paddingVertical: 15, 
+    paddingHorizontal: 30, 
+    borderRadius: 10, 
     marginTop: 20,
   },
   buttonText: {
-    color: "#fff", // Text color
-    fontSize: 18, // Text size
-    fontWeight: "bold", // Text weight
+    color: "#fff", 
+    fontSize: 18, 
+    fontWeight: "bold", 
   },
 });

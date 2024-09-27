@@ -1,7 +1,6 @@
 
-
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
 export default function About() {
   return (
@@ -18,6 +17,14 @@ export default function About() {
         new trends and innovations to stay ahead in the fast-evolving world of
         mobile and web development.
       </Text>
+      <View style={styles.check}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => alert("Button Pressed!")}
+        >
+          <Text style={styles.buttonText}>Check My Services</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -37,5 +44,23 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 18,
     color: "#555",
+  },
+
+  check: {
+    flex: 1,
+    justifyContent: "left",
+    alignItems: "left",
+  },
+  button: {
+    backgroundColor: "#0984e3", // Button color
+    paddingVertical: 15, // Vertical padding
+    paddingHorizontal: 30, // Horizontal padding
+    borderRadius: 10, // Rounded corners
+    marginTop: 20,
+  },
+  buttonText: {
+    color: "#fff", // Text color
+    fontSize: 18, // Text size
+    fontWeight: "bold", // Text weight
   },
 });

@@ -11,7 +11,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
-    // You can handle form submission here (e.g., using axios to send data)
     console.log({ firstname, lastname, email, message });
   };
 

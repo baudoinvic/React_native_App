@@ -5,8 +5,8 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import About from "./components/About/About/About";
-import Services from "./components/About/Services/Services";
+import About from "./components/About/About";
+import Services from "./components/Services/Services";
 
 const Stack = createStackNavigator();
 

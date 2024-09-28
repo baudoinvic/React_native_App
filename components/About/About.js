@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Button, StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-export default function About({navigation}) {
+export default function About({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>What I do</Text>
@@ -35,8 +34,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-start",
-    paddingTop: 50, 
-    paddingHorizontal: 20, 
+    paddingTop: 50,
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 30,
@@ -54,15 +53,15 @@ const styles = StyleSheet.create({
     alignItems: "left",
   },
   button: {
-    backgroundColor: "#0984e3", 
-    paddingVertical: 15, 
-    paddingHorizontal: 30, 
-    borderRadius: 10, 
+    backgroundColor: "#0984e3",
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 10,
     marginTop: 20,
   },
   buttonText: {
-    color: "#fff", 
-    fontSize: 18, 
-    fontWeight: "bold", 
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });

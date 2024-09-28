@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-const Services = () => {
+const Services = ({navigation}) => {
   const services = [
     {
       id: 1,
@@ -55,7 +55,7 @@ const Services = () => {
         <View style={styles.check}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("Services")}
+            onPress={() => navigation.navigate("Contact")}
           >
             <Text style={styles.buttonText}>Let's get in touch</Text>
           </TouchableOpacity>

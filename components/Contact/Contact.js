@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Button } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, TextInput } from "react-native";
 
 const Contact = () => {
   const [firstname, setFirstname] = useState("");

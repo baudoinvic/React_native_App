@@ -9,7 +9,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
-    console.log({ firstname, lastname, email, message });
+   e.preventDefault();
   };
 
   return (

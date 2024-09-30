@@ -26,7 +26,6 @@ function HomeScreen({ navigation }) {
       >
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
-
       <StatusBar style="light" />
     </LinearGradient>
   );
